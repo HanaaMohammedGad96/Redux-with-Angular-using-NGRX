@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { selectCount, selectDouble } from '../store/counter.selector';
 
 
 @Component({
@@ -10,8 +11,11 @@ import { Store } from '@ngrx/store';
 })
 export class CounterOutputComponent {
   counter$: Observable<number>;
+  dounbleCount$: Observable<number>;
 
   constructor(private store: Store<{counter: number}>) {
-    this.counter$ = this.store.select('counter');
+    // this.counter$ = this.store.select('counter');
+    this.counter$ = this.store.select(selectCount);
+    this.dounbleCount$ = this.store.select(selectDouble);
   }
 }
