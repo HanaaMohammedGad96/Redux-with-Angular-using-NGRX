@@ -1,5 +1,5 @@
 {
-  "name": "ngrx-intro",
+  "name": "angular-16-redux-using-ngrx",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
